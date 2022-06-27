@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+    --Darkcyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+
+    --Verydarkblue: hsl(212, 21%, 14%);
+    --Darkgrayishblue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+
+    --Montserrat: "Montserrat";
+    --Fraunces: "Fraunces";
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: var(--Montserrat) ;
+    background-color: var(--Cream);
+}
+
+main {
+    display: flex;
+}
+
+.left {
+    background: url(../images/image-product-desktop.jpg);
+    background-size: cover;
+    width: 18.7em;
+    height: 28.1em;
+    border-radius: 0.5625em 0 0 0.5625em;
+}
+
+.right {
+    background: var(--White);
+    width: 18.7em;
+    height: 28.1em;
+    padding-top: 1.9em;
+    padding-left: 2em;
+    padding-right: 1em;
+    border-radius: 0 0.5625em 0.5625em 0;
+}
+
+small {
+    color: var(--Darkgrayishblue);
+    font-size: .82em;
+    letter-spacing: .31em;
+}
+
+h1 {
+    font-family: var(--Fraunces);
+    font-size: 2em;
+    letter-spacing: -0.03em;
+    line-height: 1em;
+
+}
+
+p {
+    font-size: 0.875em;
+    line-height: 1.6625em;
+    color: var(--Darkgrayishblue);
+    padding-right: 0.4em;
+}
+
+span {
+    display: inline-block;
+    margin-top: .4em;
+}
+
+.price-now {
+    font-size: 2em;
+    font-family: var(--Fraunces);
+    color: var(--Darkcyan);
+    letter-spacing: -0.02em;
+    margin-right: .6em;
+    
+}
+
+.price-before {
+    color: var(--Darkgrayishblue);
+    font-size: 0.8125em;
+    font-family: var(--Montserrat);
+    text-decoration: line-through;
+    vertical-align: super;
+}
+
+button {
+    background-image: url(../images/icon-cart.svg);
+    background-repeat: no-repeat;
+    background-position: 4.5375em 1.1em;
+    background-color: var(--Darkcyan);
+    color: var(--White);
+    font-size: 0.875em;
+    letter-spacing: 0.025em;
+    border-radius: 0.5625em;
+    border: none;
+    margin-top: 1.9em;
+    padding: 1.1em 4.4em 1.2em 6.4em;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: hsl(156, 42%, 18%);
+    transition: 250ms ease-in-out;
+}
+
+@media (max-width:680px) {
+    main {
+        flex-direction: column;
+    }
+    .left {
+        background-image: url(../images/image-product-mobile.jpg);
+        width: 21.5em;
+        height: 15em;
+        border-radius: 0.5625em 0.5625em 0 0;
+    }
+
+    .right {
+        width: 21.5em;
+        height: 23.3em;
+        border-radius: 0 0 0.5625em 0.5625em;
+        padding-top: 1.5em;
+        padding-left: 1.5em;
+        padding-right: 1.3em;
+    }
+
+    h1 {
+        margin: .3em 0;
+    }
+
+    p {
+        font-size: 0.8125em;
+        margin-top: 1.3em;
+        line-height: 1.7625em;
+        padding: 0;
+    }
+
+    span {
+        margin-top: .9em;
+    }
+
+    button {
+        background-position: 6.6375em 1.1em;
+        margin-top: 1.3em;
+        padding: 0.9em 6.6em 1.3em 8.5em;
+    }
+}
+
